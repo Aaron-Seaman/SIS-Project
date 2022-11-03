@@ -12,6 +12,8 @@ public class main
 
 				System.out.println("Hi!"); 
 
+				
+				System.out.println("Aye");
 			}
 
 	}
