@@ -18,19 +18,19 @@ public class Change
 		{
 			System.out.println("What is the first name of the student whose grade you would like to change?");
 			String grade = change.nextLine();
-			if(grade.equals(studentNamesFile))
+			if(grade.equals(Student))
 			{
 				System.out.println("Which class would you like to switch your grade in?");
 				String classy = change.nextLine();
 				
-				if(classy.equals(studentNamesFile))
+				if(classy.equals(Student))
 				{
 					System.out.println("What would you like the current grade to be changed to?");
 					String newGrade = change.nextLine();
 
-					for(int i = 0; i<studentNamesFile.length; i++)
+					for(int i = 0; i<Student.length; i++)
 					{
-						if(newGrade.equals(StudentNamesFile))
+						if(newGrade.equals(Student))
 						{
 							//studentNamesFile.setGrade(i);
 						}
@@ -51,19 +51,19 @@ public class Change
 			System.out.println("What is the first name of the student whose class you would like to change?");
 			String student = change.nextLine();
 			
-			if(student.equals(studentNamesFile))
+			if(student.equals(Student))
 			{
 				System.out.println("What class would you like to change?");
 				String classy = change.nextLine();
 				
-				if(classy.equals(studentNamesFile))
+				if(classy.equals(Student))
 				{
 					System.out.println("What is the new class you would like to be put into?");
 					String newClass = change.nextLine();
 					
-					for(int i = 0; i<studentNamesFile.length; i++)
+					for(int i = 0; i<Student.length; i++)
 					{
-						if(newClass.equals(StudentNamesFile))
+						if(newClass.equals(Student))
 						{
 							//studentNamesFile.setClass(i)
 						}

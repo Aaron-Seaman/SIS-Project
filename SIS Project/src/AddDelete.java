@@ -15,6 +15,11 @@ public class AddDelete
 		
 		if(input == 1)
 		{
+
+			System.out.println("What is the first and last name of the student you would like to add?");
+			String wholeName = name.nextLine();
+			Student.add(wholeName);
+
 			Scanner first = new Scanner(System.in);
 			System.out.println("What is the first name of the student you would like to add?");
 			String fN = first.nextLine();
@@ -52,6 +57,7 @@ public class AddDelete
 			String tG = thirdG.nextLine();
 			
 			Roster.roster.add(new Student(fN, lN, g, fC, fG, sC, sG, tC, tG));
+
 		}
 		else if(input == 2)
 		{
@@ -59,6 +65,13 @@ public class AddDelete
 			System.out.println("What is the first name of the student you would like to delete?");
 			String delete = remove.nextLine();
 			
+
+				for(int i = 0; i<Student.length; i++)
+				{
+					if(wholeName.equals(Student))
+					{
+						Student.remove(i);
+
 				for(int i = 0; i<Roster.roster.size(); i++)
 				{
 					if(delete.equals(Roster.roster.get(i).getFirstName()))
