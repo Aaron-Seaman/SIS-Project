@@ -15,20 +15,68 @@ public class AddDelete
 		
 		if(input == 1)
 		{
+
 			System.out.println("What is the first and last name of the student you would like to add?");
 			String wholeName = name.nextLine();
 			Student.add(wholeName);
+
+			Scanner first = new Scanner(System.in);
+			System.out.println("What is the first name of the student you would like to add?");
+			String fN = first.nextLine();
+			
+			Scanner last = new Scanner(System.in);
+			System.out.println("What is the last name of the student you would like to add?");
+			String lN = last.nextLine();
+			
+			Scanner gpa = new Scanner(System.in);
+			System.out.println("What is the gpa of the student you would like to add?");
+			double g = gpa.nextDouble();
+			
+			Scanner firstC = new Scanner(System.in);
+			System.out.println("What is the first class you would like to add?");
+			String fC = firstC.nextLine();
+			
+			Scanner firstG = new Scanner(System.in);
+			System.out.println("What is the first grade you would like to add?");
+			String fG = firstG.nextLine();
+			
+			Scanner secondC = new Scanner(System.in);
+			System.out.println("What is the second class you would like to add?");
+			String sC = secondC.nextLine();
+			
+			Scanner secondG = new Scanner(System.in);
+			System.out.println("What is the second grade you would like to add?");
+			String sG = secondG.nextLine();
+			
+			Scanner thirdC = new Scanner(System.in);
+			System.out.println("What is the third class you would like to add?");
+			String tC = thirdC.nextLine();
+			
+			Scanner thirdG = new Scanner(System.in);
+			System.out.println("What is the third grade you would like to add?");
+			String tG = thirdG.nextLine();
+			
+			Roster.roster.add(new Student(fN, lN, g, fC, fG, sC, sG, tC, tG));
+
 		}
 		else if(input == 2)
 		{
-			System.out.println("What is the first and Last name of the student you would like to delete?");
-			String wholeName = name.nextLine();
+			Scanner remove = new Scanner(System.in);
+			System.out.println("What is the first name of the student you would like to delete?");
+			String delete = remove.nextLine();
 			
+
 				for(int i = 0; i<Student.length; i++)
 				{
 					if(wholeName.equals(Student))
 					{
 						Student.remove(i);
+
+				for(int i = 0; i<Roster.roster.size(); i++)
+				{
+					if(delete.equals(Roster.roster.get(i).getFirstName()))
+					{
+						Roster.roster.remove(i);
 					}
 				}
 		}
