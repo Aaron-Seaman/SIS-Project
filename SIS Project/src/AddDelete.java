@@ -17,18 +17,18 @@ public class AddDelete
 		{
 			System.out.println("What is the first and last name of the student you would like to add?");
 			String wholeName = name.nextLine();
-			studentNamesFile.add(wholeName);
+			Student.add(wholeName);
 		}
 		else if(input == 2)
 		{
 			System.out.println("What is the first and Last name of the student you would like to delete?");
 			String wholeName = name.nextLine();
 			
-				for(int i = 0; i<studentNamesFile.length; i++)
+				for(int i = 0; i<Student.length; i++)
 				{
-					if(wholeName.equals(StudentNamesFile))
+					if(wholeName.equals(Student))
 					{
-						studentNamesFile.remove(i);
+						Student.remove(i);
 					}
 				}
 		}

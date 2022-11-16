@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 
 public class MainMenu
 	{
@@ -7,14 +11,8 @@ public class MainMenu
 		static Scanner userStringInput = new Scanner(System.in);
 		static String pause = "";
 		
-		public static void main(String[] args)
-			{
-				System.out.println("Welcome to the student information system! Press enter to continue.");
-				pause = userIntInput.nextLine();
-				mainMenu();
-			}
-		
-		public static void mainMenu()
+
+		public static void mainMenu() throws IOException
 			{
 				System.out.println("What would you like to do next?\n (1) List Students\n (2) Add or Delete a Student\n (3) Change Grades/Schedule\n (4) Sort Students");
 				input = userIntInput.nextInt();
@@ -22,7 +20,7 @@ public class MainMenu
 				if(input == 1)
 					{
 						//list method
-						mainMenu();
+						Roster.listRoster();
 					}
 				else if(input == 2)
 					{
@@ -45,18 +43,21 @@ public class MainMenu
 						
 							if(input == 1)
 								{
-									//SortLastname.compare();
-									//list method
+									Collections.sort(Roster.RosterList, new SortLastname());
+									MainMenu.displayStudentList();
+									MainMenu.mainMenu();
 								}
 							else if(input == 2)
 								{
-									//SortGPA.compare();
-									//list method
+									Collections.sort(Roster.RosterList, new SortGPA());
+									MainMenu.displayStudentList();
+									MainMenu.mainMenu();
 								}
 							else if(input == 3)
 								{
-									//SortPeriod.compare();
-									//list method
+									Collections.sort(Roster.RosterList, new SortPeriod());
+									MainMenu.displayStudentList();
+									MainMenu.mainMenu();
 								}
 							else
 								{
@@ -73,5 +74,20 @@ public class MainMenu
 						System.out.println("I'm sorry, that is not an option. Please try again.\n");
 						mainMenu();
 					}
+			}
+		public static void displayStudentList()
+			{
+				int menuCounter = 1;
+				for(Student s : Roster.RosterList)
+					{
+						System.out.printf("%-4d" , menuCounter);
+						System.out.printf("%-8s %-12s" , s.getFirstName() , s.getLastName());
+						System.out.printf("GPA: %.2f" , s.getGpa());
+						System.out.printf("%-8s %-2s" , "  P1 " + s.getFirstClass() , s.getFirstGrade());
+						System.out.printf("%-8s %-2s" , " P2 " + s.getSecondClass() , s.getSecondGrade());
+						System.out.printf("%-8s %-2s" , " P3 " + s.getThirdClass() , s.getThirdGrade() + "\n");
+						
+						menuCounter++;
+					} 
 			}
 	}
