@@ -14,6 +14,7 @@ public class Driver
 			{
 				// TODO Auto-generated method stub
 				Roster.fillRoster();
+				GPACalc.GPACounter();
 				System.out.println("Welcome to the student information system! Press enter to continue.");
 				pause = userIntInput.nextLine();
 				MainMenu.mainMenu();
