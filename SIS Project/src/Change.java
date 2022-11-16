@@ -16,6 +16,8 @@ public class Change
 		
 		if(number == 1)
 		{
+			for(int i = 0; i<Roster.roster.size(); i++)
+			{
 			System.out.println("What is the first name of the student whose grade you would like to change?");
 			String grade = change.nextLine();
 			if(grade.equals(studentNamesFile))
@@ -41,9 +43,6 @@ public class Change
 					System.out.println("That is not a student.");
 				}
 			}
-			else
-			{
-				System.out.println("That is not one of the options.");
 			}
 		}
 		else if(number == 2)
