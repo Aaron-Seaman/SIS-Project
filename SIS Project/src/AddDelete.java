@@ -11,15 +11,12 @@ public class AddDelete
 		System.out.println("    (2) Delete a Student");
 		System.out.println("    (3) Return to the Main Menu");
 		
+		//list method
+		
 		int input = name.nextInt();
 		
 		if(input == 1)
 		{
-
-			System.out.println("What is the first and last name of the student you would like to add?");
-			String wholeName = name.nextLine();
-			Student.add(wholeName);
-
 			Scanner first = new Scanner(System.in);
 			System.out.println("What is the first name of the student you would like to add?");
 			String fN = first.nextLine();
@@ -56,7 +53,9 @@ public class AddDelete
 			System.out.println("What is the third grade you would like to add?");
 			String tG = thirdG.nextLine();
 			
-			Roster.roster.add(new Student(fN, lN, g, fC, fG, sC, sG, tC, tG));
+			Roster.RosterList.add(new Student(fN, lN, g, fC, fG, sC, sG, tC, tG));
+			
+			//list method
 
 		}
 		else if(input == 2)
@@ -65,18 +64,11 @@ public class AddDelete
 			System.out.println("What is the first name of the student you would like to delete?");
 			String delete = remove.nextLine();
 			
-
-				for(int i = 0; i<Student.length; i++)
+				for(int i = 0; i<Roster.RosterList.size(); i++)
 				{
-					if(wholeName.equals(Student))
+					if(delete.equals(Roster.RosterList.get(i).getFirstName()))
 					{
-						Student.remove(i);
-
-				for(int i = 0; i<Roster.roster.size(); i++)
-				{
-					if(delete.equals(Roster.roster.get(i).getFirstName()))
-					{
-						Roster.roster.remove(i);
+						Roster.RosterList.remove(i);
 					}
 				}
 		}
@@ -84,8 +76,6 @@ public class AddDelete
 		{
 			//return them to the main menu
 		}
-		
-			
-	}
 	
+	}
 }
