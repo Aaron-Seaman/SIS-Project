@@ -27,7 +27,7 @@ public class Roster
 						String period3Grade = file.next();
 
 				// test case 
-				//RosterList.add(new Student("Johnny", "Sins", 4.0, "penis", "A", "vagina", "B", "sextape", "D"));
+				
 						RosterList.add(new Student(firstName, lastName, gpa, period1, period1Grade, period2, period2Grade, period3, period3Grade));
 					}
 			
