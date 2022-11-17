@@ -100,7 +100,11 @@ public class Change
 		}
 		else if(number == 3)
 		{
+
 			MainMenu.mainMenu();
+
+			//return to main menu
+
 		}
 		else
 		{

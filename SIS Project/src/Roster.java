@@ -26,7 +26,11 @@ public class Roster
 						String period3 = file.next();
 						String period3Grade = file.next();
 
+
 				
+
+				// test case 
+
 				
 						RosterList.add(new Student(firstName, lastName, gpa, period1, period1Grade, period2, period2Grade, period3, period3Grade));
 					}
