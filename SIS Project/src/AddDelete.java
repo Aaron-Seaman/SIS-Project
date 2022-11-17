@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AddDelete 
 {
-	public static void main(String[] args)
+	public static void AddStart() throws IOException
 	{
 		Scanner name = new Scanner(System.in);
 		
@@ -74,8 +75,12 @@ public class AddDelete
 		}
 		else
 		{
-			//return them to the main menu
+			MainMenu.mainMenu();
 		}
 	
 	}
+
 }
+
+}
+

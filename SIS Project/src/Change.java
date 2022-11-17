@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Change 
 {
 
-	public static void main(String[] args) 
+	public static void ChangeStart() throws IOException 
 	{
 		Scanner change = new Scanner(System.in);
 		
@@ -99,7 +100,11 @@ public class Change
 		}
 		else if(number == 3)
 		{
+
+			MainMenu.mainMenu();
+
 			//return to main menu
+
 		}
 		else
 		{
