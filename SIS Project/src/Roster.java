@@ -26,17 +26,18 @@ public class Roster
 						String period3 = file.next();
 						String period3Grade = file.next();
 
-				// test case 
-				//RosterList.add(new Student("Johnny", "Sins", 4.0, "penis", "A", "vagina", "B", "sextape", "D"));
+				
+				
 						RosterList.add(new Student(firstName, lastName, gpa, period1, period1Grade, period2, period2Grade, period3, period3Grade));
 					}
 			
 			}
-		public static void listRoster()
+		public static void listRoster() throws IOException
 		{
 			for(int i = 0; i < RosterList.size(); i++)
 				{
 					System.out.println(RosterList.get(i).getFirstName() + " " + RosterList.get(i).getLastName() + " GPA: " + RosterList.get(i).getGpa() + " First Class: " + RosterList.get(i).getFirstClass() + " Grade: " + RosterList.get(i).getFirstGrade() + " Second Class: " + RosterList.get(i).getSecondClass() + " Grade: " + RosterList.get(i).getSecondGrade() + " Third Class: " + RosterList.get(i).getThirdClass() + " Grade: " + RosterList.get(i).getThirdGrade());
 				}
+			MainMenu.mainMenu();
 		}
 	}

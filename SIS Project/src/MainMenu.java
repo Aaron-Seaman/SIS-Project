@@ -25,14 +25,14 @@ public class MainMenu
 				else if(input == 2)
 					{
 						//Add/Delete
-						System.out.println("Please press enter to return to the main menu.");
+						AddDelete.AddStart();
 						pause = userIntInput.nextLine();
 						mainMenu();
 					}
 				else if(input == 3)
 					{
 						//Grades/Schedule
-						System.out.println("Please press enter to return to the main menu.");
+						Change.ChangeStart();
 						pause = userIntInput.nextLine();
 						mainMenu();
 					}
